@@ -1,0 +1,267 @@
+@use '../sections' as *;
+@use '../utils' as *;
+
+.footer {
+  padding-block: $section-padding * 2;
+  background-color: $cultured-1;
+  padding-inline: 20px;
+  text-align: center;
+
+  &_container {
+    display: grid;
+    row-gap: 70px;
+  }
+
+  &_top {
+    display: grid;
+    gap: 35px;
+    .item {
+
+      &:nth-child(1) {
+        p,a {
+          font-size: $fs-8;
+        }
+
+        span {
+          color: $black;
+          font-weight: $fw-600;
+          text-decoration: underline;
+          transition: $transition-2;
+          cursor: pointer;
+          &:hover {
+            color: $hoockers-green;
+          }
+        }
+
+        .tel {
+          color: $black;
+          font-weight: $fw-600;
+        }
+      }
+
+      &:nth-child(4) {
+        p {
+          font-size: $fs-7;
+          line-height: 1.8;
+        }
+
+        .email {
+          position: relative;
+          display: flex;
+          margin-top: 20px;
+
+
+          input {
+            background-color: $white;
+            width: 100%;
+            padding-inline: 20px 10px;
+            font-size: $fs-8;
+            border: 1px solid $hoockers-green_20;
+            transition: $transition-2;
+            &:focus {
+              border-color:$black;
+            }
+          }
+
+          button {
+            @include btn($black,$hoockers-green,$white,$white,$fw-600);
+            border-radius: 0px 3px 3px 0;
+          }
+        }
+      }
+
+
+      &:not(:nth-child(1),:nth-child(4)) {
+        p {
+          font-size: $fs-7;
+          cursor: pointer;
+          transition: $transition-2;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      display: grid;
+      row-gap: 5px;
+
+      .title {
+        color: $black;
+        margin-bottom: 10px;
+        font-size: $fs-5;
+        font-weight: $fw-600;
+        line-height: 1;
+      }
+
+      .bigTitle {
+        color: $black;
+        margin-bottom: 7px;
+        font-weight: $fw-600;
+        font-size: $fs-3;
+        line-height: 1;
+      }
+
+
+    }
+  }
+
+  &_bottom {
+    display: grid;
+    row-gap: 15px;
+    .center {
+      display: none;
+    }
+
+    .copyright {
+      font-size: $fs-7;
+      margin-top: 10px;
+    }
+
+    .icons {
+      display: flex;
+      column-gap: 12px;
+      justify-content: center;
+      ion-icon {
+        color: $black;
+        cursor: pointer;
+        transition: $transition-2;
+        font-size: 17px;
+        &:hover {
+          color: $hoockers-green;
+        }
+      }
+    }
+
+    .payments {
+      margin-inline: auto;
+    }
+
+
+
+
+  }
+}
+
+
+@media (min-width:575px) {
+  .footer {
+    padding-inline: initial;
+    &_container {
+      margin-inline: auto;
+      max-width: 530px;
+    }
+
+  }
+}
+
+@media (min-width:768px) {
+  .footer {
+    &_container {
+      max-width: 700px;
+      row-gap: 80px;
+
+    }
+
+    &_top {
+      grid-template-columns: repeat(3,1fr);
+      grid-template-areas:"child1 child2 child3"
+                            "child4 child4 child4";  
+      .item {
+        text-align: left;
+        justify-self: center;
+        &:nth-child(1) {
+          grid-area: child1;
+        }
+        &:nth-child(2) {
+          grid-area: child2;
+        }
+        &:nth-child(3) {
+          grid-area: child3;
+        }
+        &:nth-child(4) {
+          grid-area: child4;
+          justify-self: start;
+          width: 100%;
+        }
+      }
+    }
+
+    &_bottom {
+      grid-template-columns: repeat(3,fr);
+      grid-template-areas: "copyright icons payments";
+      align-items: center;
+      gap: 50px;
+      .icons{
+        grid-area: icons;
+        justify-self: center;
+      }
+
+      .payments {
+        grid-area: payments;
+        justify-self: right;
+      }
+
+      .center {
+        grid-area: centerr;
+      }
+
+      .copyright {
+        grid-area: copyright;
+        margin-top: initial;
+        justify-self: left;
+      }
+
+    }
+  }
+}
+
+
+@media (min-width:992px) {
+  .footer {
+    &_container {
+      max-width: 930px;
+    }
+
+    &_top {
+      grid-template-columns: repeat(5,1fr);
+      grid-template-areas:"child1 child2 child3 child4 child4";
+
+      .item {
+        .bigTitle {
+          margin-bottom: 10px;
+          position: relative;
+          top: -4px;
+        }
+      }
+    }
+  }
+
+}    
+
+
+@media (min-width:1200px) {
+  .footer {
+    &_container {
+      max-width: 1300px;
+      padding-inline: 40px;
+    }
+
+    &_bottom {
+      grid-template-columns: repeat(4,fr);
+      justify-content: space-between;
+      grid-template-areas: "copyright icons centerr payments";
+      .center {
+        display: block;
+        justify-self: center;
+        img {
+          width: 230px;
+        }
+      }
+    }
+
+  }
+
+}  
+
+
+

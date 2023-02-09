@@ -1,0 +1,232 @@
+@use '../sections' as *;
+@use '../utils/component' as *;
+
+.bestsellers,.under {
+  padding-top: $section-padding * 2;
+  padding-inline: 15px;
+  .section_top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 10px;
+    color: $black;
+    margin-bottom: 40px;
+    font-weight: $fw-600;
+
+
+    .section_title {
+      font-size: $fs-3;
+      font-weight: $fw-600;
+
+    }
+    p {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      cursor: pointer;
+      transition: $transition-2;
+      &:hover {
+        color: $hoockers-green;
+      }
+    }
+  }
+
+  &_container {
+    display: grid;
+    gap: 30px;
+    overflow: auto;
+    @extend %show-hide-scrollbar;
+    .item {
+      overflow: hidden;
+      &:hover {
+        .options {
+          right: 20px;
+        }
+      }
+
+      &_top {
+        position: relative;
+        .options {
+          position: absolute;
+          top: 50%;
+          right: -50%;
+          transform: translateY(-50%);
+          display: grid;
+          row-gap: 10px;
+          transition: 0.7s ease-in;
+          span {
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+            background-color: $white;
+            display: block;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            transition: $transition-2;
+            &:hover {
+              background-color: $black;
+              ion-icon {
+                color: $white;
+              }
+            }
+            ion-icon {
+              color: $black;
+              font-size: 23px;
+              --ionicon-stroke-width: 23px;
+            }
+          }
+        }
+
+        &.promo::before {
+          content: '-20%';
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          background-color: $hoockers-green;
+          color: $white;
+          font-weight: $fw-700;
+          line-height: 1;
+          padding: 6px 13px;
+          display: flex;
+          align-items: center;
+          border-radius: $radius-3;
+        }
+      }
+
+      &_bottom {
+        margin-top: 18px;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        row-gap: 5px;
+        .price {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 5px;
+          flex-direction: row-reverse;
+          .current {
+            color: $black;
+            font-weight: $fw-700;
+          }
+          .prev {
+            font-size: $fs-9;
+            position: relative;
+            top: 1px;
+          }
+        }
+
+        .title {
+          color: $black;
+          font-size: $fs-7;
+          transition: $transition-2;
+          cursor: pointer;
+          position: relative;
+          padding-bottom: 1px;
+          line-height: 1.5;
+          text-align: center;
+          &:hover {
+            color: $hoockers-green;
+            text-decoration: underline;
+          }
+        }
+
+        .reviews {
+          display: flex;
+          align-items: center;
+          column-gap: 5px;
+          margin-top: 2px;
+
+          p {
+            font-size: $fs-8;
+          }
+
+          .stars {
+            display: flex;
+            position: relative;
+            column-gap: 1.5px;
+            top: -1px;
+            ion-icon {
+              font-size: 14px;
+              color: $hoockers-green;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+
+@media (min-width:575px) {
+  .bestsellers,.under {
+    margin-inline: auto;
+    max-width: 530px;
+
+    padding-inline: initial;
+    &_container {
+      padding-bottom: 30px;
+      display: flex;
+      margin-inline: auto;
+      scroll-snap-type: x mandatory;
+      .item {
+        min-width: 250px;
+        scroll-snap-align: start;
+      }
+    }
+
+  }
+}
+
+@media (min-width:768px) {
+  .bestsellers,.under {
+    max-width: 700px;
+
+    &_container {
+      .item {
+        min-width: calc((100% - 30px) / 2);
+      }
+    }
+
+  }
+}
+
+@media (min-width:992px) {
+  .bestsellers,.under {
+    max-width: 930px;
+
+    &_container {
+      .item {
+        min-width: calc((100% - 60px) / 3);
+      }
+    }
+
+  }
+}
+
+@media (min-width:1200px) {
+  .bestsellers,.under {
+    padding-inline: 20px;
+    max-width: 1300px;
+
+    &_container {
+      width: 100%;
+    }
+
+    .item {
+      min-width: calc((100% - 120px) / 5);
+    }
+
+  }
+}
+
+
+
+
+
+

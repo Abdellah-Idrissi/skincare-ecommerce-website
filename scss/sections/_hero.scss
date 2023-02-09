@@ -1,0 +1,98 @@
+@use '../sections' as *;
+@use '../utils/' as *;
+
+.heroSwiper {
+  padding-inline: 15px;
+
+  .container {
+    overflow: auto;
+    display: flex;
+    column-gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 5px;
+    @extend %show-hide-scrollbar;
+  }
+
+  .hero_container {
+    scroll-snap-align: start;
+    min-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    background-position: 40%;
+    background-size: cover;
+    height: 560px;
+
+    &:nth-child(1) {
+      background-image: url(../../images/hero-banner-1.jpg);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../../images/hero-banner-2.jpg);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../../images/hero-banner-3.jpg);
+    }
+
+    .info {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      padding-inline: 15px;
+
+      .title {
+        color: $black;
+        font-size: var(--fs-1);
+        font-weight: $fw-600;
+        line-height: 1.2;
+      }
+  
+      .description {
+        font-size: $fs-6;
+        max-width: 400px;
+        font-weight: $fw-500;
+      }
+  
+      .price {
+        color: black;
+        font-weight: $fw-600;
+        font-size: $fs-5;
+        margin-block: 5px 0;
+      }
+  
+      button {
+        @include btn($black,$hoockers-green,$white,$white,$fw-600);
+      }
+    }
+  }
+
+}
+
+@media (min-width:575px) {
+  .heroSwiper {
+    .hero_container {
+      .info {
+        padding-inline: 60px;
+        .description {
+          max-width: 345px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .heroSwiper {
+    .hero_container {
+      .info {
+        padding-inline: 85px;
+      }
+    }
+  }
+}

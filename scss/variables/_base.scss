@@ -1,0 +1,26 @@
+@use './colors' as *;
+
+
+//---------- SPACING ----------//
+$section-padding: 35px;
+@media (min-width:992px) {
+  $section-padding: 50px;
+}
+
+
+//---------- BORDER RADUIS ----------//
+$radius-3: 3px;
+
+
+//---------- BOX SHADOWS ----------//
+$shadow-1: 0 8px 16px $black_15;
+$shadow-2: 0 4px 10px $black_5;
+
+
+//---------- TRANSITIONS ----------//
+$transition-1: 0.25s ease;
+$transition-2: 0.5s ease;
+$cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+$cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+

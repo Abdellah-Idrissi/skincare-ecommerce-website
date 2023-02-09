@@ -1,0 +1,347 @@
+@use '../sections' as *;
+
+.header {
+  overflow: hidden;
+
+  .alert_msg {
+    color: $black;
+    background-color: $pale-spring-bud;
+    font-weight: $fw-700;
+    letter-spacing: 2px;
+    font-size: $fs-7;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    transition: $transition-2;
+  }
+
+  ion-icon {
+    color: $black;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  &_container {
+    background-color: $white;
+    padding-inline: 13px;
+
+  }
+
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+    transition: $transition-2;
+    background-color: $white;
+
+
+
+    .logo {
+      width: 170px;
+    }
+
+    .menu_icon {
+      width: 24px;
+      display: grid;
+      align-items: center;
+      row-gap: 4px;
+      cursor: pointer;
+      span {
+        display: block;
+        height: 2px;
+        background-color: $black;
+      }
+    }
+
+    .search_input,
+    .star_icon,
+    .bag_icon,
+    .total_price {
+      display: none;
+    }
+
+  }
+
+  &_nav_desktops {
+    background-color: $white;
+    display: none;
+  }
+
+  &_nav_mobile {
+    position: fixed;
+    height: 100%;
+    left: -130%;
+    top: 0;
+    width: 330px;
+    padding: 30px;
+    background-color: $white;
+    box-shadow: $shadow-2;
+    transition: $transition-2;
+    z-index: 150;
+
+    .close_icon {
+      cursor: pointer;
+    }
+
+    &.show {
+      left: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 55px;
+
+      .logo {
+        width: 170px;
+      }
+
+      .close_icon {
+        font-size: 27px;
+        --ionicon-stroke-width: 40px;
+        color: $hoockers-green;
+      }
+    }
+
+    .nav_list {
+      display: grid;
+      row-gap: 10px;
+      transition: $transition-2;
+
+      li {
+        color: $black;
+        font-size: $fs-8;
+        font-weight: $fw-600;
+        letter-spacing: 0.9px;
+        transition: $transition-1;
+        text-transform: uppercase;
+        &:hover {
+          color: $hoockers-green;
+        }
+
+        &.active {
+          color: $hoockers-green;
+        }
+
+      }
+    }
+
+  }
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(53, 53, 53, 0.30);
+  transition: $transition-1;
+  z-index: 130;
+  &.show {
+    opacity: 1;
+  }
+}
+
+@media(max-width:1199px) {
+  .header {
+    &.active &_top {
+      position: fixed;
+      top: -65px;
+      bottom: auto;
+      transform: translateY(100%);
+      box-shadow: $shadow-1;
+      z-index: 100;
+      width: 100%;
+      left: 0;
+      padding-inline: 13px;
+    }
+
+    &.header_hide &_top {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .header {
+
+    &.active &_nav_desktops {
+      position: fixed;
+      top: -63px;
+      bottom: auto;
+      transform: translateY(100%);
+      box-shadow: $shadow-1;
+      width: 100%;
+      left: 0;
+      z-index: 100;
+    }
+
+    &.header_hide &_nav_desktops {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    &_top {
+      .search_input,
+      .star_icon,
+      .bag_icon,
+      .total_price {
+        display: block;
+      }
+
+      padding-bottom: 0;
+
+      ion-icon {
+        --ionicon-stroke-width: 30px;
+      }
+
+      .menu_icon {
+        display: none;
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .total_price {
+          margin-right: -22px;
+          color: $black;
+          font-size: $fs-7;
+          font-weight: $fw-600;
+          position: relative;
+          top: 2.25px;
+          user-select: none;
+        }
+
+        ion-icon {
+          transition: $transition-2;
+          &:hover {
+            color: $black_70;
+            &::after {
+              background-color: $black_70;
+            }
+          }
+        }
+
+        .star_icon,
+        .bag_icon {
+          position: relative;
+          padding-right: 11px;
+          &::after {
+            content: '0';
+            position: absolute;
+            transition: $transition-2;
+            right: 0;
+            top: 0;
+            font-size: 13px;
+            background-color: $black;
+            width: 15px;
+            height: 15px;
+            display: grid;
+            place-items: center;
+            line-height: normal;
+            border-radius: 50%;
+            color: white;
+          }
+        }
+
+      }
+
+
+
+      .search_input {
+        border: 2px solid $hoockers-green_20;
+        border-radius: $radius-3;
+        position: relative;
+        padding: 10px 10px 10px 18px;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        font-size: $fs-7;
+        transition: $transition-1;
+
+        &:focus-within {
+          border-color: $black;
+        }
+
+        .search_input {
+          caret-color: $hoockers-green;
+        }
+
+        .search_icon {
+        --ionicon-stroke-width: 35px;
+          font-size: 23px;
+        }
+      }
+
+
+    }
+
+    &_nav_mobile {
+      display: none;
+    }
+
+    &_nav_desktops {
+      display: block;
+      position: initial;
+      height: initial;
+      width: initial;
+      inset: 0;
+      box-shadow: initial;
+      padding-block:20px;
+      transition: $transition-2;
+
+      .wrapper {
+        display: none;
+      }
+
+      .nav_list {
+        display: flex;
+        justify-content: center;
+        column-gap: 35px;
+        position: relative;
+        left: 17px;
+        li {
+          color: $black;
+          font-size: $fs-8;
+          font-weight: $fw-600;
+          letter-spacing: 0.9px;
+          transition: $transition-1;
+          position: relative;
+
+          &.active {
+            &::before {
+              width: 100%;
+            }
+          }
+
+          &::before {
+            content: '';
+            transition: $transition-1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: $black;
+
+          }
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+} 

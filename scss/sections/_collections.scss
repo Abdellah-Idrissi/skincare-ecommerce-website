@@ -1,0 +1,210 @@
+@use '../sections' as *;
+@use '../utils' as *;
+
+
+.collections {
+  padding-inline: 15px;
+  padding-top: 20px;
+
+  &_container {
+    display: grid;
+    row-gap: 20px; 
+    .item {
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+
+      &:nth-child(1) {
+        .image {
+          background-image: url(../../images/collection-1.jpg);
+        }      
+      }
+      &:nth-child(2) {
+        .image {
+          background-image: url(../../images/collection-2.jpg);
+        }
+      }
+      &:nth-child(3) {
+        .image {
+          background-image: url(../../images/collection-3.jpg);
+        }
+      }
+
+      .image {
+        background-size: cover;
+        background-position: 40%;
+        height: 100%;
+        transition: $transition-2;
+        position: relative;
+        &::before {
+          content: '';
+          background-image: $gradient;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: -150%;
+          top: 0;
+          transform: skewX(-20deg);
+          transition: 0.7s;
+          z-index: 10;
+        }
+      }
+
+      &:hover {
+        .image {
+          transform: scale(1.2);
+          &::before {
+            animation: flashLeft 1s;
+          }
+        }
+
+      }
+      
+      .info {
+        position: absolute;
+        top: 0;
+        padding:30px 35px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+
+        .title {
+          color: $black;
+          font-weight: $fw-600;
+          font-size: $fs-3;
+          line-height: 1.4;
+        }
+
+        .description {
+          color: $black;
+          font-weight: $fw-600;
+          margin-top: 10px;
+          font-size: $fs-6;
+        }
+
+        .shopBtn {
+          color: $black;
+          font-weight: $fw-600;
+          width: fit-content;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          column-gap: 5px;
+          transition: $transition-2;
+          position: relative;
+          cursor: pointer;
+          padding: 8px 15px;
+          overflow: hidden;
+          border-radius: 30px;
+          text-align: center;
+          background-color: transparent;
+          z-index: 1;
+
+          .arrow {
+            transition: $transition-2;
+          }
+
+          &.shop2 {
+            &::after {
+              background-color: hsla(148deg, 20%, 38%, 0.1);
+            }
+          }
+
+          &.shop1 {
+            &::after {
+              background-color:rgb(170,169,167,0.14);
+            }
+          }
+
+          &.shop3 {
+            &::after {
+              background-color: hsl(40deg 37% 40% / 10%);
+
+            }
+          }
+
+          &::after {
+            content: '';
+            width: 41.60px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            border-radius: 50%;
+            transition: 0.8s ease;
+            z-index: -1;
+          }
+
+          &:hover {
+            padding-right: 20px;
+            &:after {
+              transform: scale(10);
+            }
+            .arrow {
+              transform: translateX(5px);
+            }
+          }
+
+        }
+      }
+
+
+    }
+  }
+}
+
+@media (min-width:575px){
+  .collections {
+    margin-inline: auto;
+    max-width: 530px;
+    padding-inline: initial;
+    &_container {
+      justify-content: center;
+      .item {
+        width: 530px;
+      }
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .collections {
+    max-width: 700px;
+
+    &_container {
+      .item {
+        width: 690px;
+        height: 450px;
+      }
+    }
+  }
+}
+
+@media (min-width:992px) {
+  .collections {
+    padding-top: 40px;
+    max-width: 930px;
+
+    &_container {
+      grid-template-columns:repeat(3,1fr);
+      column-gap: 30px;
+      .item {
+        width: initial;
+      }
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .collections {
+    max-width: 1300px;
+    padding-inline: 20px;
+    &_container {
+      grid-template-columns:repeat(3,minmax(360px,400px));
+      column-gap: 30px;
+      .item {
+        width: initial;
+      }
+    }
+  }
+}

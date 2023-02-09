@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!------------ METADATA ------------>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing</title>
+  <meta name="title" content="Glowing - Reveal The Beauty of Skin">
+
+  <!------------ FAVICON ------------>
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+
+  <!------------ PRELOAD HERO IMAGES ------------>
+  <link rel="preload" as="image" href="./images/hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./images/hero-banner-2.jpg">
+  <link rel="preload" as="image" href="./images/hero-banner-3.jpg">
+
+  <!------------ MAIN CSS FILE ------------>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+  <main>
+    <!------------ OVERLAY ------------>
+    <div class="overlay"></div>
+
+    <!------------ ARROW UP ------------>
+    <div class="arrowup">
+      <a href="#"><ion-icon name="arrow-up" aria-hidden="true"></ion-icon></a>
+    </div>
+  
+    <!------------ HEADER ------------>
+    <header class="header">
+      <div class="alert_msg">Free Shipping On All U.S. Orders $50+</div>
+      <div class="header_container">
+        <div class="header_top">
+          <div class="input_menu">
+            <div class="search_input">
+              <ion-icon name="search-outline" class="search_icon" aria-hidden="true"></ion-icon>
+              <input type="text" placeholder="Search product">
+            </div>
+  
+            <div class="menu_icon">
+              <span class="line1"></span>
+              <span class="line2"></span>
+              <span class="line3"></span>
+            </div>
+          </div>
+  
+          <div class="logo">
+            <img src="./images/logo.png" alt="">
+          </div>
+  
+          <div class="details">
+            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            <ion-icon name="star-outline" aria-hidden="true" class="star_icon"></ion-icon>
+            <div class="total_price">$0.00</div>
+            <ion-icon name="bag-handle-outline" aria-hidden="true" class="bag_icon"></ion-icon>
+          </div>
+        </div>
+        <nav class="header_nav_desktops">
+          <ul class="nav_list">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#collections">Collection</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#offer">Offer</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="header_nav_mobile">
+      <div class="wrapper">        
+        <div class="logo"><img src="./images/logo.png" alt=""></div>
+        <ion-icon name="close-outline" aria-hidden="true" class="close_icon"></ion-icon>
+      </div>
+  
+      <ul class="nav_list">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#collections">Collection</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#offer">Offer</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </nav>
+  
+    <!------------ HERO ------------>
+    <div class="heroSwiper section" id="home">
+      <div class="container">
+        <div class="hero_container">
+          <div class="info">
+            <h1 class="title">Reveal The <br> Beauty of Skin</h1>
+            <p class="description">Made using clean, non-toxic ingredients, our products are designed for everyone.</p>
+            <span class="price">Starting at $7.99</span>
+            <button>Shop Now</button>
+          </div>
+        </div>
+        <div class="hero_container">
+          <div class="info">
+            <h1 class="title">Reveal The <br> Beauty of Skin</h1>
+            <p class="description">Made using clean, non-toxic ingredients, our products are designed for everyone.</p>
+            <span class="price">Starting at $7.99</span>
+            <button>Shop Now</button>
+          </div>
+        </div>
+        <div class="hero_container">
+          <div class="info">
+            <h1 class="title">Reveal The <br> Beauty of Skin</h1>
+            <p class="description">Made using clean, non-toxic ingredients, our products are designed for everyone.</p>
+            <span class="price">Starting at $7.99</span>
+            <button>Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!------------ COLLECTIONS ------------>
+    <div class="collections section" id="collections">
+      <div class="collections_container">
+        <div class="item">
+          <div class="image"></div>
+          <div class="info">
+            <div class="txt">        
+              <h2 class="title">Summer Collection</h2>
+              <p class="description">Starting at $17.99</p>
+            </div>
+    
+            <div class="shopBtn shop1">
+              Shop Now
+              <ion-icon name="arrow-forward" aria-hidden="true" class="arrow"></ion-icon>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="image"></div>
+          <div class="info">
+            <div class="txt">        
+              <h2 class="title">What’s New?</h2>
+              <p class="description">Get the glow</p>
+            </div>
+    
+            <div class="shopBtn shop2">
+              Discover Now
+              <ion-icon name="arrow-forward" aria-hidden="true" class="arrow"></ion-icon>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="image"></div>
+          <div class="info">
+            <div class="txt">        
+              <h2 class="title">Buy 1 Get 1</h2>
+              <p class="description">Starting at $7.99</p>
+            </div>
+    
+            <div class="shopBtn shop3">
+              Discover Now
+              <ion-icon name="arrow-forward" aria-hidden="true" class="arrow"></ion-icon>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!------------ BESTSELLERS (PRODUCTS) ------------>
+    <div class="bestsellers section" id="shop">
+      <div class="section_top">
+        <h2 class="section_title">Our Bestsellers</h2>
+        <p>
+          Shop All Products
+          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+        </p>
+      </div>
+      <div class="bestsellers_container">
+        <div class="item">
+          <div class="item_top promo">
+            <img src="./images/product-01.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$29.00</p>
+              <del class="prev">$39.00</del>
+            </div>
+            <p class="title">Facial cleanser</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-02.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$29.00</p>
+            </div>
+            <p class="title">Bio-shroom Rejuvenating Serum</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-03.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$29.00</p>
+            </div>
+            <p class="title">Coffee Bean Caffeine Eye Cream</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-04.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$29.00</p>
+            </div>
+            <p class="title">Facial cleanser</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top promo">
+            <img src="./images/product-05.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$29.00</p>
+              <del class="prev">$39.00</del>
+            </div>
+            <p class="title">Coffee Bean Caffeine Eye Cream</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-06.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$29.00</p>
+            </div>
+            <p class="title">Facial cleanser</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!------------ UNDER 25 (PRODUCTS) ------------>
+    <div class="under">
+      <div class="section_top">
+        <h2 class="section_title">Under $25</h2>
+        <p>
+          Shop All Products
+          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+        </p>
+      </div>
+      <div class="under_container">
+        <div class="item">
+          <div class="item_top promo">
+            <img src="./images/product-07.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$22.00</p>
+              <del class="prev">$30.00</del>
+            </div>
+            <p class="title">Facial cleanser</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-08.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$22.00</p>
+            </div>
+            <p class="title">Bio-shroom Rejuvenating Serum</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-09.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$22.00</p>
+            </div>
+            <p class="title">Coffee Bean Caffeine Eye Cream</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top promo">
+            <img src="./images/product-10.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$22.00</p>
+              <del class="prev">$30.00</del>
+  
+            </div>
+            <p class="title">Facial cleanser</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-11.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$22.00</p>
+            </div>
+            <p class="title">Coffee Bean Caffeine Eye Cream</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="item_top">
+            <img src="./images/product-01.jpg" alt="">
+            <div class="options">
+              <span><ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="star-outline" aria-hidden="true"></ion-icon></span>
+              <span><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon></span>
+            </div>
+          </div>
+          <div class="item_bottom">
+            <div class="price">
+              <p class="current">$22.00</p>
+            </div>
+            <p class="title">Facial cleanser</p>
+            <div class="reviews">
+              <div class="stars">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+              <p>5170 reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!------------ BANNER ------------>
+    <div class="banner">
+        <div class="discover">
+          <div class="image">
+          </div>
+          <div class="info">
+            <p class="title">New Collection</p>
+            <h3>Discover Our Autumn Skincare</h3>
+            <button>explore more</button>
+          </div>
+        </div>
+  
+        <div class="promotion">
+          <div class="image">
+          </div>
+          <div class="info">
+            <h3>25% off Everything</h3>
+            <p>Makeup with extended range in colors for every human.</p>
+            <button>shop sale</button>
+          </div>
+        </div>
+    </div>
+  
+    <!------------ FEATURES ------------>
+    <div class="features">
+      <h2 class="section_title">Why Shop with Glowing?</h2>
+      <div class="features_container">
+        <div class="item">
+          <img src="./images/feature-1.jpg" alt="">
+          <h3>Guaranteed PURE</h3>
+          <p>All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients</p>
+        </div>
+  
+        <div class="item">
+          <img src="./images/feature-2.jpg" alt="">
+          <h3>Completely Cruelty-Free</h3>
+          <p>All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients</p>
+        </div>
+  
+        <div class="item">
+          <img src="./images/feature-3.jpg" alt="">
+          <h3>Ingredient Sourcing</h3>
+          <p>All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients</p>
+        </div>
+      </div>
+    </div>
+  
+    <!------------ OFFER ------------>
+    <div class="offer section" id="offer">
+      <div class="offer_top">
+        <div class="img1"><img src="./images/offer-banner-1.jpg" alt=""></div>
+        <div class="img2"><img src="./images/offer-banner-2.jpg" alt=""></div>
+      </div>
+  
+      <div class="offer_bottom">
+        <p class="promo">SPECIAL OFFER <span>-20%</span></p>
+        <h2>Mountain Pine Bath Oil</h2>
+        <p class="description">Made using clean, non-toxic ingredients, our products are designed for everyone.</p>
+        <div class="time">
+          <div class="days">15</div>
+          <span>:</span>
+          <div class="hours">21</div>
+          <span>:</span>
+          
+          <div class="minutes">33</div>
+          <span>:</span>
+  
+          <div class="seconds">8</div>
+        </div>
+        <button>Get Only $39.00</button>
+      </div>
+    </div>
+  
+    <!------------ DISCOVER ------------>
+    <div class="blog section" id="blog">
+      <h2 class="section_title">More to Discover</h2>
+      <div class="blog_container">
+        <div class="item">
+          <div class="image">
+            <img src="./images/blog-1.jpg" alt="">
+          </div>
+          <div class="info">
+            <h4>Find a Store</h4>
+            <p>Our Store <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="./images/blog-2.jpg" alt="">
+          </div>
+          <div class="info">
+            <h4>From Our Blog</h4>
+            <p>Our Store <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="./images/blog-3.jpg" alt="">
+  
+          </div>
+          <div class="info">
+            <h4>Our Story</h4>
+            <p>Our Store <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!------------ FOOTER ------------>
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_top">
+          <div class="item">
+            <h5 class="title">Company</h5>
+            <p>Find a location nearest you. See <span class="stores">Our Stores</span></p>
+            <a href="tel:+391 (0)35 2568 4593" class="tel">+391 (0)35 2568 4593</a>
+            <a href="mailto:hello@domain.com">hello@domain.com</a>
+          </div>
+    
+          <div class="item">
+            <h5 class="title">Useful links</h5>
+            <p>New Products</p>
+            <p>Best Sellers</p>
+            <p>Bundle & Save</p>
+            <p>Online Gift Card</p>
+          </div>
+    
+          <div class="item">
+            <h5 class="title">Infomation</h5>
+            <p>Start a Return</p>
+            <p>Contact Us</p>
+            <p>Shipping FAQ</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+          </div>
+    
+          <div class="item">
+            <h5 class="bigTitle">Good emails.</h5>
+            <p>Enter your email below to be the first to know about new collections and product launches.        </p>
+            <div class="email">
+              <input type="email" placeholder="Enter your email address">
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer_bottom">
+          <div class="icons">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-youtube"></ion-icon>
+          </div>
+    
+          <div class="center">
+            <img src="./images/logo.png" alt="">
+          </div>
+    
+          <div class="payments">
+            <img src="./images/pay.png" alt="">
+          </div>
+    
+          <p class="copyright">&copy; 2023 Glowing. All Rights Reserved</p>
+    
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <!------------ SCROLLREVEAL ------------>
+  <script src="./js/scrollreveal.min.js"></script>
+
+  <!------------ MAIN JS FILE ------------>
+  <script src="./js/main.js"></script>
+
+  <!------------ IONICONS LIBRARY ------------>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

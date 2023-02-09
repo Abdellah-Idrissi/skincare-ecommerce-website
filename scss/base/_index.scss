@@ -1,0 +1,25 @@
+
+//---------- VARIABLES ----------//
+@forward '../variables/typography';
+
+
+//---------- UTILS ----------//
+@forward '../utils/component';
+@forward '../utils/animations';
+
+//---------- RESET ----------//
+@forward './reset';
+
+//---------- SECTIONS ----------//
+@forward '../sections/header';
+@forward '../sections/hero';
+@forward '../sections/collections';
+@forward '../sections/products';
+@forward '../sections/banner';
+@forward '../sections/features';
+@forward '../sections/offer';
+@forward '../sections/discover';
+@forward '../sections/footer';
+
+
+

@@ -1,0 +1,108 @@
+@use '../sections' as *;
+
+
+.features {
+  padding-top: $section-padding;
+  padding-inline: 20px;
+  text-align: center;
+  .section_title {
+    color: $black;
+    font-size: $fs-2;
+    font-weight: $fw-600;
+    line-height: 1.4;
+    margin-bottom: 35px;
+  }
+
+  &_container {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 35px;
+    align-items: center;
+    justify-content: center;
+    .item {
+      img {
+        width: 100px;
+        margin-inline: auto;
+      }
+
+      h3 {
+        color: $black;
+        font-size: $fs-4;
+        font-weight: $fw-600;
+        margin-block: 15px 10px;
+      }
+
+      p {
+        font-size: $fs-7;
+        max-width: 430px;
+        margin-inline: auto;
+      }
+
+    }
+  }
+}
+
+
+@media (min-width:575px) {
+  .features {
+    margin-inline: auto;
+    max-width: 530px;
+    padding-inline: initial;
+  }
+}
+
+@media (min-width:768px) {
+  .features {
+    max-width: 700px;
+    &_container {
+      grid-template-columns: repeat(4,1fr);
+      grid-template-areas:  "child1 child1 child2 child2"
+                            ". child3 child3 .";
+
+      .item {
+        &:nth-child(1) {
+          grid-area: child1;
+        }
+        &:nth-child(2) {
+          grid-area: child2;
+        }
+        &:nth-child(3) {
+          grid-area: child3;
+        }
+      }
+
+    }
+  }
+}
+
+@media (min-width:992px) {
+  .features {
+    max-width: 930px;
+    padding-top: $section-padding * 1.5;
+
+    .section_title {
+      margin-bottom: 40px;
+    }
+
+    &_container {
+      grid-template-columns: repeat(6,1fr);
+      grid-template-areas:  "child1 child1 child2 child2 child3 child3" ;
+
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .features {
+    max-width: 1300px;
+    padding-inline: 20px;
+
+    &_container {
+      .item {
+        p {
+          max-width: 350px;
+        }
+      }
+    }
+  }
+}
